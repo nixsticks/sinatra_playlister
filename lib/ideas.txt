@@ -1,0 +1,3 @@
+Maybe an app interface is just a composite of smaller displays?
+So there's an ArtistDisplay, a SongDisplay, a GenreDisplay, which all inherit from displays
+And then there's a larger composite display.
