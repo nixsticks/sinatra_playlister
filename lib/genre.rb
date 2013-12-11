@@ -1,6 +1,3 @@
-require_relative 'searchable'
-require_relative 'classmethods'
-
 class Genre
   extend Searchable
   extend ClassMethods

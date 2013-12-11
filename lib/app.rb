@@ -1,4 +1,4 @@
-require_relative 'parser'
+require_relative 'database'
 
 class PlayLister
 
@@ -55,7 +55,6 @@ class PlayLister
 
   def selector
     choice = get_input
-    # bob dylan
 
     if /artist|genre/ =~ choice
       Artist.index if choice == "artist"

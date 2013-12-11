@@ -1,0 +1,84 @@
+body {
+  font-family: "Lekton", sans-serif;
+  text-align: center;
+  background-color: #FFDBB8;
+  color: #903;
+}
+
+a {
+  text-decoration: none;
+  color: #903;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #177FD4;
+}
+
+h1 {
+  font-size: 70px;
+  font-family: "Purple Purse", sans-serif;
+  color: #5C2E00;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-weight: 700;
+}
+
+header {
+  background-color: #5C2E00;
+  position: fixed;
+  min-height: 40px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container {
+  margin: 100px;
+}
+
+.left-link {
+  float: left;
+}
+
+.right-link {
+  float: right;
+}
+
+.left-link {
+  float: left;
+}
+
+.left-link > li {
+  left: 100%;
+  right: auto;
+  margin-left: -1px;
+  margin-right: 0;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.right-link > li {
+  right: 100%;
+  left: auto;
+  margin-right: 15px;
+  margin-left: 0;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0px 5px;
+}

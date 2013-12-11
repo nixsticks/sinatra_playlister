@@ -1,0 +1,6 @@
+<h2>Genres</h2>
+<div class="list">
+  <% @genres.each do |genre| %>
+    <p><a href="/<%= genre.name %>"><%= genre.name.capitalize %></a></p>
+  <% end %>
+</div

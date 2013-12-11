@@ -1,6 +1,3 @@
-require_relative 'searchable'
-require_relative 'classmethods'
-
 class Artist
   extend Searchable
   extend ClassMethods

@@ -1,0 +1,7 @@
+<h2><%= @choice.name.capitalize %></h2>
+<h4><%= @choice.artists.size %> artists, <%= @choice.songs.size %> songs</h4>
+<div class="list">
+  <% @choice.artists.each do |artist| %>
+    <p><a href="/<%= artist.name %>"><%= artist.name %></a> - <a href="/<%= artist.songs.first.name %>"><%= artist.songs.first.name %></a></p>
+  <% end %>
+</div>
