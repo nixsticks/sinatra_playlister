@@ -4,6 +4,8 @@ gem 'sinatra'
 
 gem 'bootstrap'
 
+gem 'nokogiri'
+
 group :development do
   gem 'shotgun'
   gem 'tux'

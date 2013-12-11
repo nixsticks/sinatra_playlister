@@ -3,6 +3,9 @@ GEM
   specs:
     bond (0.4.3)
     bootstrap (0.0.1)
+    mini_portile (0.5.2)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -34,6 +37,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap
+  nokogiri
   shotgun
   sinatra
   tux

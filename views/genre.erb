@@ -1,7 +1,8 @@
 <h2><%= @choice.name.capitalize %></h2>
-<h4><%= @choice.artists.size %> artists, <%= @choice.songs.size %> songs</h4>
+<h4><%= @choice.artists.size %> <%= pluralize(@choice.artists, "artist") %>, <%= @choice.songs.size %> <%= pluralize(@choice.songs, "song") %></h4>
 <div class="list">
   <% @choice.artists.each do |artist| %>
-    <p><a href="/<%= artist.name %>"><%= artist.name %></a> - <a href="/<%= artist.songs.first.name %>"><%= artist.songs.first.name %></a></p>
+    <p></p>
+    <p><a href="/<%= artist.songs.detect{|song| song.genre == @choice}.name %>"><i class="icon-play"></i></a> <a href="/<%= artist.name %>"><%= artist.name %></a> - <%= artist.songs.detect{|song| song.genre == @choice}.name %></p>
   <% end %>
 </div>

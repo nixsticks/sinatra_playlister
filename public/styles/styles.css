@@ -73,6 +73,10 @@ header {
   font-weight: 600;
 }
 
+header a {
+  color: #FFDBB8;
+}
+
 .right-link > li {
   right: 100%;
   left: auto;
