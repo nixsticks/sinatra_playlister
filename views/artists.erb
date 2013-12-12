@@ -1,6 +1,6 @@
 <h2>Artists</h2>
 <div class="list">
-  <% @artists.each do |artist| %>
+  <% @artists.sort_by {|artist| artist.name}.each do |artist| %>
     <p>
       <a href="/artist/<%= artist.name %>"><%= artist.name %></a>
     </p>
