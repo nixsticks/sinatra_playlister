@@ -75,7 +75,7 @@ module Playlister
       end
 
       def partial_search(choice)
-        partial_select(@artists, choice) || partial_select(@songs, choice) || partial_select(@genres, choice)
+        partial_select(@artists, choice) + partial_select(@songs, choice) + partial_select(@genres, choice)
       end
 
       def symbolize(word)
