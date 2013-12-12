@@ -48,6 +48,15 @@ header {
   z-index: 1;
 }
 
+input {
+  border-radius: 5px;
+  border: none;
+}
+
+input:focus {
+  outline-color: #FFDBB8;
+}
+
 .container {
   margin: 100px;
 }
