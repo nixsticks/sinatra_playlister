@@ -3,6 +3,6 @@
 <div class="list">
   <% @choice.artists.each do |artist| %>
     <p></p>
-    <p><a href="/<%= artist.songs.detect{|song| song.genre == @choice}.name %>"><i class="icon-play"></i></a> <a href="/<%= artist.name %>"><%= artist.name %></a> - <%= artist.songs.detect{|song| song.genre == @choice}.name %></p>
+    <p><a href="/song/<%= artist.songs.detect{|song| song.genre == @choice}.name %>"><i class="icon-play"></i></a> <a href="/artist/<%= artist.name %>"><%= artist.name %></a> - <%= artist.songs.detect{|song| song.genre == @choice}.name %></p>
   <% end %>
 </div>

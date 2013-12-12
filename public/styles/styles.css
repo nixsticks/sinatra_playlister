@@ -71,6 +71,7 @@ header {
   margin-right: 0;
   display: inline-block;
   font-weight: 600;
+  padding: 0px;
 }
 
 header a {

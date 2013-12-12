@@ -32,13 +32,23 @@ module Playlister
       erb :genres
     end
 
-    get '/:choice' do |choice|
-      @choice = search(choice)
+    get '/:type/:choice' do |type, choice|
+      @choice = search(listize(type), choice)
       if @choice
         @url = get_url("https://gdata.youtube.com/feeds/api/videos?q=#{@choice.artist.name.gsub(/[\s\-]/, "%20")}+#{@choice.name.gsub(" ", "%20")}+music+video").match(/\=(.*)&/)[1] if @choice.is_a?(Song)
         erb symbolize(@choice.class)
       else
         erb :not_found
+      end
+    end
+
+    post '/search' do
+      @choice = partial_search(params["search"])
+
+      if @choice.empty?
+        erb :not_found
+      else
+        erb :search
       end
     end
 
@@ -56,12 +66,24 @@ module Playlister
         list.size > 1 ? word + "s" : word
       end
 
-      def search(choice)
-        @artists.detect {|element| element.name == choice} || @songs.detect {|element| element.name == choice} || @genres.detect {|element| element.name == choice}
+      def partial_select(list, choice)
+        list.select {|element| element.name.downcase.include?(choice.downcase)}
+      end
+
+      def search(list, choice)
+        list.detect {|element| element.name.downcase == choice.downcase}
+      end
+
+      def partial_search(choice)
+        partial_select(@artists, choice) || partial_select(@songs, choice) || partial_select(@genres, choice)
       end
 
       def symbolize(word)
         word.to_s.downcase.to_sym
+      end
+
+      def listize(word)
+        eval("@#{word.to_s.downcase}s")
       end
 
       def simple_partial(template)

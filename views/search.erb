@@ -1,0 +1,4 @@
+<h3>The following results match your search:</h3>
+<% @choice.each do |result| %>
+  <p><a href="/<%= result.class.to_s.downcase %>/<%= result.name %>"><%= result.name %></a></p>
+<% end %>

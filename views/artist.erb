@@ -2,6 +2,6 @@
 <h4><%= @choice.songs.size %> <%= pluralize(@choice.songs, "song") %> </h4>
 <div class="list">
   <% @choice.songs.each do |song| %>
-    <p><a href="/<%= song.name %>"><i class="icon-play"></i></a> <%= song.name %> (<a href="/<%= song.genre.name%>"><%= song.genre.name %></a>)</p>
+    <p><a href="/song/<%= song.name %>"><i class="icon-play"></i></a> <%= song.name %> (<a href="/genre/<%= song.genre.name%>"><%= song.genre.name %></a>)</p>
   <% end %>
 </div>
